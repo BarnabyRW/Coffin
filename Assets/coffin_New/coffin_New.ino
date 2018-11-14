@@ -13,11 +13,12 @@ void loop() {
   //if the button is pressed
   if(digitalRead(2)==LOW && closed ==false){
     //Send the message
-    Keyboard.println("n"); 
+    Keyboard.println(" "); 
     closed = true;   
   }
-  else if(digitalRead(2)==HIGH){
-
+  else if(digitalRead(2)==HIGH && closed ==true){
+    Keyboard.println("n");
+    Keyboard.println(" ");
     closed = false;   
   }
   delay(1000);
